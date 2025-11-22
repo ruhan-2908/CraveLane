@@ -53,3 +53,4 @@ coverage/
 # Optional: lockfiles (if you want)
 # package-lock.json
 # yarn.lock
+backend/config/
