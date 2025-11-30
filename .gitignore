@@ -11,7 +11,7 @@ build/
 .env
 .env.*
 *.log
-
+admin/.vite
 # Ignore local development files
 .DS_Store
 Thumbs.db
