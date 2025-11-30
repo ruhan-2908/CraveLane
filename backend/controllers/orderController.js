@@ -9,13 +9,13 @@ const placeOrder = async (req, res) => {
     const frontend_url = "http://localhost:5173"
     try {
         const newOrder = new orderModel({
-            userId:req.userId,
+            userId:req.user.userId,
             items:req.body.items,
             amount:req.body.amount,
             address:req.body.address
         })
         await newOrder.save();
-        await userModel.findByIdAndUpdate(req.userId,{cartData:{}})
+        await userModel.findByIdAndUpdate(req.user.userId,{cartData:{}})
 
         const line_items = req.body.items.map((item) =>({
             price_data:{
@@ -77,5 +77,14 @@ const verifyOrder = async (req,res) =>{
         res.json({success:false,message:"Error"});
     }
 }
-
-export {placeOrder,verifyOrder}
+const userOrders = async (req,res) =>{
+    try{
+        const orders = await orderModel.find({userId:req.user.userId});
+        res.json({success:true,data:orders});
+    }catch (error)
+    {   
+        console.log(error);
+        res.json({success:false,message:"Error"})
+    }
+}
+export {placeOrder,verifyOrder,userOrders}
