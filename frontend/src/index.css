@@ -7,7 +7,9 @@
   scroll-behavior:smooth;
 }
 body{
-  min-height: 100vh; 
+  min-height: 100vh;
+  background-color: #F7F3EE;
+  color: #3C2F2F;
 }
 a{
   text-decoration: none;
@@ -16,6 +18,7 @@ a{
 .app{
   width:80%;
   margin: auto;
+  background-color: #F7F3EE;
 }
 @keyframes fadeIn {
   0%{
@@ -24,4 +27,45 @@ a{
   100%{
     opacity: 1;
   }
+}
+@keyframes slideUp {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F3EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #C89F5D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8845A;
+}
+selection {
+  background-color: #C89F5D;
+  color: white;
+}
+::selection {
+  background-color: #C89F5D;
+  color: white;
 }

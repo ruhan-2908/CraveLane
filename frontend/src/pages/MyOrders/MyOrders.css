@@ -14,26 +14,40 @@
     gap: 30px;
     font-size: 14px;
     padding: 10px 20px;
-    color: #454545;
-    border:1px solid tomato;
+    color: #3C2F2F;
+    border: 1px solid #C89F5D;
+    background: linear-gradient(135deg, #F7F3EE 0%, #EDE7DE 100%);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.my-orders-order:hover{
+    box-shadow: 0 4px 12px rgba(200, 159, 93, 0.2);
 }
 .my-orders-order img{
     width: 50px;
 }
 .my-orders-order p span{
-    color: tomato;
+    color: #C89F5D;
 }
 .my-orders-order p b {
     font-weight: 500;
-    color: #454545;
+    color: #3C2F2F;
 }
 .my-orders-order button{
     border: none;
     padding: 12px 0px;
     border-radius: 4px;
-    background-color: #ffe1e1;
+    background-color: #ffe8d6;
     cursor: pointer;
-    color: #454545;
+    color: #C89F5D;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #C89F5D;
+}
+.my-orders-order button:hover{
+    background: linear-gradient(135deg, #C89F5D 0%, #B8845A 100%);
+    color: white;
+    transform: translateY(-2px);
 }
 @media (max-width:900px)
 {
