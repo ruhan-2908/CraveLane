@@ -2,35 +2,193 @@
     width: 70%;
     margin-left: max(5vw,25px);
     margin-top: 50px;
-    color: #6d6d6d;
+    color: #3C2F2F;
     font-size: 16px;
 }
-.add form{
-    gap:20px;
+
+.add h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #3C2F2F;
 }
+
+.add form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: linear-gradient(135deg, #F7F3EE 0%, #EDE7DE 100%);
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #C89F5D;
+    box-shadow: 0 4px 12px rgba(200, 159, 93, 0.15);
+}
+
+.add-image-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.add-image-upload label {
+    font-weight: 600;
+    color: #3C2F2F;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.add-image-upload input[type="file"] {
+    display: none;
+}
+
 .add-image-upload img{
     width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px dashed #C89F5D;
+    padding: 5px;
 }
+
 .add-product-name, .add-product-description
 {
-    width: max(40%,280px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+.add-product-name label, .add-product-description label {
+    font-weight: 600;
+    color: #3C2F2F;
+}
+
 .add-product-name input, .add-product-description textarea{
-    padding: 10px;
+    padding: 12px 15px;
+    border: 2px solid #C89F5D;
+    border-radius: 8px;
+    color: #3C2F2F;
+    background-color: white;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
 }
+
+.add-product-name input:focus, .add-product-description textarea:focus {
+    border-color: #B8845A;
+    box-shadow: 0 0 8px rgba(200, 159, 93, 0.2);
+    background-color: #F7F3EE;
+}
+
 .add-category-price{
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
+
+.add-category-price > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-category-price label {
+    font-weight: 600;
+    color: #3C2F2F;
+}
+
 .add-category-price select , .add-category-price input{
-    max-width: 120px;
-    padding: 10px;
+    min-width: 150px;
+    padding: 12px 15px;
+    border: 2px solid #C89F5D;
+    border-radius: 8px;
+    color: #3C2F2F;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
 }
+
+.add-category-price select:hover, .add-category-price input:hover {
+    border-color: #B8845A;
+    background-color: #F7F3EE;
+}
+
+.add-category-price select:focus, .add-category-price input:focus {
+    border-color: #B8845A;
+    box-shadow: 0 0 8px rgba(200, 159, 93, 0.2);
+}
+
 .add-btn{
-    max-width: 120px;
+    align-self: flex-start;
+    min-width: 150px;
     border: none;
-    padding: 10px;
-    background-color: black;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #C89F5D 0%, #B8845A 100%);
     color: white;
     cursor: pointer;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(200, 159, 93, 0.2);
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(200, 159, 93, 0.3);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .add {
+        width: 85%;
+        margin-left: max(3vw, 15px);
+    }
+
+    .add form {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .add-category-price {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .add-category-price select, .add-category-price input {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .add {
+        width: 95%;
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+
+    .add h1 {
+        font-size: 22px;
+    }
+
+    .add form {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .add-product-name, .add-product-description {
+        width: 100%;
+    }
+
+    .add-product-name input, .add-product-description textarea {
+        padding: 10px 12px;
+    }
 }
