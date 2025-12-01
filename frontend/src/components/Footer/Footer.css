@@ -50,6 +50,8 @@
 .footer-social-icons img:hover{
     filter: brightness(1);
     transform: scale(1.1);
+    background-color: #C89F5D;
+    border-radius: 50%;
 }
 .footer hr{
     width: 100%;
@@ -74,4 +76,10 @@
     .footer-copyright{
         text-align: center;
     }
+}
+/* Adjust logo size */
+#imp {
+    width: 120px;       /* change as you like */
+    height: auto;       /* keeps correct proportions */
+    object-fit: contain;
 }

@@ -11,7 +11,7 @@ const Add = ({url}) => {
         name: "",
         description: "",
         price: '',
-        category: "Salad"
+        category: "BreakFast"
     });
     const onChangeHandler = (e) => {
         const name = e.target.name;
@@ -32,7 +32,7 @@ const Add = ({url}) => {
                 name: "",
                 description: "",
                 price: '',
-                category: "Salad"
+                category: "BreakFast"
             })
             setImage(false);
             toast.success(response.data.message);
@@ -62,14 +62,16 @@ const Add = ({url}) => {
                     <div className="add-category flex-col">
                         <p>Product Category</p>
                         <select name="category" onChange={onChangeHandler}>
-                            <option value="Salad">Salad</option>
-                            <option value="Rolls">Rolls</option>
-                            <option value="Deserts">Deserts</option>
-                            <option value="Sandwich">Sandwich</option>
-                            <option value="Cake">Cake</option>
-                            <option value="Pure Veg">Pure Veg</option>
-                            <option value="Pasta">Pasta</option>
-                            <option value="Noodles">Noodles</option>
+                            <option value="BreakFast">BreakFast</option>
+                            <option value="Dosa">Dosa</option>
+                            <option value="Meals">Meals</option>
+                            <option value="Biryani">Biryani</option>
+                            <option value="Non-Veg Curry">Non-Veg Curry</option>
+                            <option value="Starters">Starters</option>
+                            <option value="Veg Curry">Veg Curry</option>
+                            <option value="Bread">Bread</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Snacks">Snacks</option>
                         </select>
                     </div>
                     <div className="add-price flex-col">

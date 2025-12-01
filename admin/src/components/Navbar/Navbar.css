@@ -10,5 +10,7 @@
     width: max(10%,80px);
 }
 .navbar .profile{
-    width: 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }

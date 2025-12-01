@@ -23,11 +23,23 @@
 .explore-menu-list::-webkit-scrollbar{
     display: none;
 }
+.explore-menu-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .explore-menu-list-item img{
     width: 7.5vw;
     min-width: 80px;
+    max-width: 120px;
+    height: 7.5vw;
+    min-height: 80px;
+    max-height: 120px;
     cursor: pointer;
     border-radius: 50%;
+    object-fit: cover;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(200, 159, 93, 0.1);
 }
@@ -36,7 +48,7 @@
     box-shadow: 0 8px 20px rgba(200, 159, 93, 0.2);
 }
 .explore-menu-list-item p{
-    margin-top: 10px;
+    margin-top: 0px;
     color: #3C2F2F;
     font-size: max(1.4vw,16px);
     cursor: pointer;

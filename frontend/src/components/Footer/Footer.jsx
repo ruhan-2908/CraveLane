@@ -6,7 +6,7 @@ const Footer = () => {
     <div className='footer' id='footer'>
         <div className="footer-content">
             <div className="footer-content-left">
-                <img src={assets.logo}  alt="" />
+                <img id="imp" src={assets.logo}  alt="" />
                 <p>CraveLane brings your favorite meals right to your doorstep. Fast delivery, fresh food, and a seamless ordering experience—anytime, anywhere.</p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
