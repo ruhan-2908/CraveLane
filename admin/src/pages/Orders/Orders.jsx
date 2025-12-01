@@ -9,21 +9,34 @@ const Orders = () => {
   const url = "http://localhost:4000"
 
   const fetchAllOrders = async () => {
+  try {
     const response = await axios.get(url + "/api/order/list")
     if (response.data.success) {
       setOrders(response.data.data)
-      console.log(response.data.data)
     } else {
-      toast.error("Error")
+      toast.error("Failed to fetch orders")
     }
+  } catch (error) {
+    toast.error("Server not reachable")
+    console.error(error)
   }
-  const statusHandler = async (event,orderId) => {
-    const response =await axios.post(url+"/api/order/status",{orderId,status:event.target.value})
-    if(response.data.success)
-    {
-      await fetchAllOrders();
+}
+
+const statusHandler = async (event, orderId) => {
+  try {
+    const response = await axios.post(url + "/api/order/status", { orderId, status: event.target.value })
+    if (response.data.success) {
+      await fetchAllOrders()
+      toast.success("Status updated")
+    } else {
+      toast.error("Failed to update status")
     }
+  } catch (error) {
+    toast.error("Server not reachable")
+    console.error(error)
   }
+}
+
   useEffect(() => {
     fetchAllOrders()
   }, [])
