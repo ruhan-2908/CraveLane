@@ -7,7 +7,7 @@ import {verifyOrder} from '../controllers/orderController.js'
 const orderRouter = express.Router();
 
 orderRouter.post('/place',authMiddlware,placeOrder);
-orderRouter.get('/verify',verifyOrder); 
+orderRouter.post('/verify',verifyOrder); 
 orderRouter.post('/userorders',authMiddlware,userOrders) 
 orderRouter.get('/list',listOrders); 
 orderRouter.post('/status',updateStatus);
