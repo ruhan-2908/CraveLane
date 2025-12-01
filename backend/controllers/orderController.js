@@ -18,27 +18,29 @@ const placeOrder = async (req, res) => {
         await userModel.findByIdAndUpdate(req.userId, { cartData: {} })
 
         const line_items = req.body.items.map((item) =>({
-            price_data:{
-                currency :"inr",
-                product_data:{
-                    name:item.name
-                },
-                unit_amount:item.price*100
-            },
-            quantity: item.quantity
-        }))
+    price_data:{
+        currency :"inr",
+        product_data:{
+            name:item.name
+        },
+        unit_amount: Math.round(item.price * 100) 
+    },
+    quantity: item.quantity
+}));
+
 
 
         line_items.push({
-            price_data:{
-                currency:"inr",
-                product_data:{
-                    name:"Delivery Charges"
-                },
-                unit_amount:2*100*80
-            },
-            quantity:1
-        })
+    price_data:{
+        currency:"inr",
+        product_data:{
+            name:"Delivery Charges"
+        },
+        unit_amount: 30 * 100 
+    },
+    quantity:1
+});
+
         
 
         const session = await stripe.checkout.sessions.create({
@@ -90,7 +92,7 @@ const userOrders = async (req, res) => {
         res.json({ success: false, message: "Error" });
     }
 }
-// ...existing code...
+
 
 const listOrders = async (req,res)=>{
     try
@@ -103,6 +105,8 @@ const listOrders = async (req,res)=>{
         res.json({success:false,message:"False"});
     }
 }
+
+
 // api for order status
 const updateStatus = async (req,res)=>{
     try{

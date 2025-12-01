@@ -6,7 +6,10 @@
     position: relative;
     z-index: 50;
 }
-
+.navbar #r{
+    border-radius: 50%;
+    border: 2px solid black;
+}
 .navbar .logo {
     width: 100px;
     height: 100px;
