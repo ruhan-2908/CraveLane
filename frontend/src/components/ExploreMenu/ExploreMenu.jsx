@@ -6,7 +6,7 @@ const ExploreMenu = ({ category, setCategory }) => {
         <div className='explore-menu' id='explore-menu'>
             <h1>Explore Our Menu</h1>
             <p className='explore-menu-text'>
-                Discover a wide selection of dishes crafted to satisfy every taste. Whether you
+                     Discover a wide selection of dishes crafted to satisfy every taste. <br /> Whether you
                 crave something classic or adventurous, we have the perfect meal waiting for you.
             </p>
 
