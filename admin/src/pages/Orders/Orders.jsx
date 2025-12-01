@@ -6,7 +6,7 @@ import { assets } from '../../assets/assets'
 
 const Orders = () => {
   const [orders, setOrders] = useState([])
-  const url = "https://cravelane-backend.onrender.com/"
+  const url = "https://cravelane-backend.onrender.com"
 
   const fetchAllOrders = async () => {
   try {
