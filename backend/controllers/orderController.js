@@ -9,13 +9,13 @@ const placeOrder = async (req, res) => {
     const frontend_url = "http://localhost:5173"
     try {
         const newOrder = new orderModel({
-            userId:req.user.userId,
-            items:req.body.items,
-            amount:req.body.amount,
-            address:req.body.address
+            userId: req.userId,
+            items: req.body.items,
+            amount: req.body.amount,
+            address: req.body.address
         })
         await newOrder.save();
-        await userModel.findByIdAndUpdate(req.user.userId,{cartData:{}})
+        await userModel.findByIdAndUpdate(req.userId, { cartData: {} })
 
         const line_items = req.body.items.map((item) =>({
             price_data:{
@@ -77,16 +77,20 @@ const verifyOrder = async (req,res) =>{
         res.json({success:false,message:"Error"});
     }
 }
-const userOrders = async (req,res) =>{
-    try{
-        const orders = await orderModel.find({userId:req.user.userId});
-        res.json({success:true,data:orders});
-    }catch (error)
-    {   
-        console.log(error);
-        res.json({success:false,message:"Error"})
+const userOrders = async (req, res) => {
+    try {
+        console.log("req.userId:", req.userId); // Debug log
+        if (!req.userId) {
+            return res.json({ success: false, message: "User not authenticated" });
+        }
+        const orders = await orderModel.find({ userId: req.userId });
+        res.json({ success: true, data: orders });
+    } catch (error) {
+        console.log("Error in userOrders:", error);
+        res.json({ success: false, message: "Error" });
     }
 }
+// ...existing code...
 
 const listOrders = async (req,res)=>{
     try
