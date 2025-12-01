@@ -1,5 +1,5 @@
 import React, { Fragment, use, useState } from 'react'
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar_Temp/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
