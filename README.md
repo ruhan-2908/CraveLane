@@ -28,7 +28,7 @@ CraveLane is a full-stack food delivery platform built using the MERN stack. It 
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 - React  
