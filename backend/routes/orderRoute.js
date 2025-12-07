@@ -1,14 +1,21 @@
-import express from 'express'
-import authMiddlware from '../middleware/auth.js'
-import {listOrders, placeOrder, updateStatus, userOrders} from '../controllers/orderController.js'
-import {verifyOrder} from '../controllers/orderController.js'
-
+import express from "express";
+import authMiddlware from "../middleware/auth.js";
+import {
+  listOrders,
+  placeOrder,
+  updateStatus,
+  userOrders,
+} from "../controllers/orderController.js";
+import { verifyOrder } from "../controllers/orderController.js";
 
 const orderRouter = express.Router();
 
-orderRouter.post('/place',authMiddlware,placeOrder);
-orderRouter.post('/verify',verifyOrder); 
-orderRouter.post('/userorders',authMiddlware,userOrders) 
-orderRouter.get('/list',listOrders); 
-orderRouter.post('/status',updateStatus);
+//customer routes
+orderRouter.post("/place", authMiddlware, placeOrder);
+orderRouter.post("/verify", verifyOrder);
+orderRouter.post("/userorders", authMiddlware, userOrders);
+
+//admin routes
+orderRouter.get("/list", listOrders);
+orderRouter.post("/status", updateStatus);
 export default orderRouter;

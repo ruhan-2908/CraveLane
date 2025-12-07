@@ -1,16 +1,16 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 4%;
-    background-color: #F7F3EE;
-    border-bottom: 1px solid #C89F5D;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4%;
+  background-color: #f7f3ee;
+  border-bottom: 1px solid #c89f5d;
 }
-.navbar .logo{
-    width: max(10%,80px);
+.navbar .logo {
+  width: max(10%, 80px);
 }
-.navbar .profile{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+.navbar .profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }

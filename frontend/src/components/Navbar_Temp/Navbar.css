@@ -1,199 +1,200 @@
 .navbar {
-    padding: 20px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 50;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 50;
 }
-.navbar #r{
-    border-radius: 50%;
-    border: 2px solid black;
+.navbar #r {
+  border-radius: 50%;
+  border: 2px solid black;
 }
 .navbar .logo {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .navbar-menu {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    color: #3C2F2F;
-    font-size: 18px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #3c2f2f;
+  font-size: 18px;
 }
 
 .navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .navbar button {
-    background: transparent;
-    font-size: 16px;
-    color: #3C2F2F;
-    border: 2px solid #C89F5D;
-    padding: 10px 30px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
+  background: transparent;
+  font-size: 16px;
+  color: #3c2f2f;
+  border: 2px solid #c89f5d;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .navbar button:hover {
-    background-color: #C89F5D;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(200, 159, 93, 0.2);
+  background-color: #c89f5d;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 159, 93, 0.2);
 }
 
 .navbar .active {
-    padding-bottom: 2px;
-    border-bottom: 2px solid #C89F5D;
-    color: #C89F5D;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #c89f5d;
+  color: #c89f5d;
 }
 
 .navbar li {
-    cursor: pointer;
-    transition: all 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .navbar li:hover {
-    color: #C89F5D;
+  color: #c89f5d;
 }
 
 .navbar-search-icon {
-    position: relative;
+  position: relative;
 }
 
 .navbar-search-icon .dot {
-    position: absolute;
-    min-width: 10px;
-    min-height: 10px;
-    background-color: #C89F5D;
-    border-radius: 5px;
-    top: -8px;
-    right: -8px;
-    box-shadow: 0 2px 8px rgba(200, 159, 93, 0.3);
-    animation: pulse 2s ease-in-out infinite;
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: #c89f5d;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+  box-shadow: 0 2px 8px rgba(200, 159, 93, 0.3);
+  animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.2);
-        opacity: 0.8;
-    }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
 }
 
-@media (max-width:1050px) {
-    .navbar .logo {
-        width: 140px;
-    }
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
 
-    .navbar-menu {
-        gap: 20px;
-        font-size: 17px;
-    }
+  .navbar-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
 
-    .navbar-right {
-        gap: 30px;
-    }
+  .navbar-right {
+    gap: 30px;
+  }
 
-    .navbar-right img {
-        width: 22px;
-    }
+  .navbar-right img {
+    width: 22px;
+  }
 
-    .navbar-right button {
-        padding: 8px 25px;
-    }
+  .navbar-right button {
+    padding: 8px 25px;
+  }
 }
 
-@media (max-width:900px) {
-    .navbar .logo {
-        width: 120px;
-    }
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
 
-    .navbar-menu {
-        gap: 15px;
-        font-size: 16px;
-    }
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
 
-    .navbar-right {
-        gap: 20px;
-    }
+  .navbar-right {
+    gap: 20px;
+  }
 
-    .navbar-right img {
-        width: 20px;
-    }
+  .navbar-right img {
+    width: 20px;
+  }
 
-    .navbar-right button {
-        padding: 7px 20px;
-        font-size: 15px;
-    }
+  .navbar-right button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
 }
 
-@media (max-width:750px) {
-    .navbar-menu {
-        display: none;
-    }
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
 }
 
 .navbar-profile {
-    position: relative;
+  position: relative;
 }
 
 .nav-profile-dropdown {
-    position: absolute;
-    display: none;
-    right: 0;
-    z-index: 50;
+  position: absolute;
+  display: none;
+  right: 0;
+  z-index: 50;
 }
 
-.navbar-profile:hover .nav-profile-dropdown{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: linear-gradient(135deg, #F7F3EE 0%, #EDE7DE 100%);
-    padding: 12px 25px;
-    border-radius: 8px;
-    border: 1px solid #C89F5D;
-    outline: 2px solid white;
-    list-style: none;
-    box-shadow: 0 4px 12px rgba(200, 159, 93, 0.15);
-    animation: slideDown 0.3s ease;
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(135deg, #f7f3ee 0%, #ede7de 100%);
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 1px solid #c89f5d;
+  outline: 2px solid white;
+  list-style: none;
+  box-shadow: 0 4px 12px rgba(200, 159, 93, 0.15);
+  animation: slideDown 0.3s ease;
 }
 
-.nav-profile-dropdown li{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    color: #3C2F2F;
-    transition: all 0.3s ease;
-    padding: 8px 4px;
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #3c2f2f;
+  transition: all 0.3s ease;
+  padding: 8px 4px;
 }
 
-.nav-profile-dropdown img{
-    width: 20px;
+.nav-profile-dropdown img {
+  width: 20px;
 }
 
-.nav-profile-dropdown li:hover{
-    color: #C89F5D;
-    transform: translateX(4px);
+.nav-profile-dropdown li:hover {
+  color: #c89f5d;
+  transform: translateX(4px);
 }
 
 @keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
